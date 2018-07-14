@@ -1,0 +1,12 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+.fooholder{
+	width: 100vw;
+	height: 5vh;
+	left: 0px;
+	bottom: 0px;
+	position: fixed;
+	background: #a26769;
+}
