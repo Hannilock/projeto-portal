@@ -1,6 +1,9 @@
 <?php
 	require 'functions.php';
 	$people = getPeople();
+	if(isset($_POST["sub"])){
+		editInfo(getPeople(), $_POST['position'],$_POST['name'],$_POST["birthdate"],$_POST["adress"],$_POST["phone"],$_POST["email"]);
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +28,7 @@
 		</style>
 	</head>
 	<body>
-		<form action="editData.php" method="POST">
+		<form action="editInfo.php" method="POST">
 			<table>
 				
 				<tr>
@@ -44,8 +47,8 @@
 							echo $person[$e];
 							echo "</td>";
 						}
-						echo "<td><input type=\"submit\" name=\"edit[".$e."]\" value=\"editar\" /></td>";
-						echo "<td><input type=\"submit\" name=\"delete[".$e."]\" value=\"excluir\" /></td>";
+						echo "<td><input type=\"submit\" name=\"edit[".$i."]\" value=\"editar\" /></td>";
+						echo "<td><input type=\"submit\" name=\"delete[".$i."]\" value=\"excluir\" /></td>";
 						echo "</tr>";
 					}
 				?>
