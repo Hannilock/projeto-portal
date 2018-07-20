@@ -24,14 +24,31 @@
 	}
 
 	//register functions
+	function setDataForRegister($name, $birthdate, $adress, $phone, $email){
+		return PHP_EOL.$name."|".$birthdate."|".$adress."|".$phone."|".$email.";";
+	}
+
 	function writeData($name, $birthdate, $adress, $phone, $email){
 		$file = "../dados.txt";
 		$ponteiro = Fopen($file,"a+");
-		$data = PHP_EOL.$name."|".$birthdate."|".$adress."|".$phone."|".$email.";";
+		$data = setDataForRegister($name, $birthdate, $adress, $phone, $email);
 		Fwrite($ponteiro,$data);
 		fclose($ponteiro);
 	}
 
 	//listing functions
+	function getPeople(){
+		$arquivo = "../dados.txt";
+		$ponteiro = Fopen($arquivo,"c+");
+		$texto = Fread($ponteiro, filesize($arquivo));
+		$people = explode(";", $texto);
+		fclose($ponteiro);
+		return $people;
+	}
+
+	function getPerson($rawData){
+		$personData = explode("|", $rawData);
+		return $personData;
+	}
 
 ?>

@@ -27,6 +27,7 @@
 						header('Location: register.php');
 						break;
 					case "see all people":
+						header('Location: listing.php');
 						break;
 					case "edit people":
 						break;
