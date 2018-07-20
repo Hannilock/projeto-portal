@@ -15,7 +15,6 @@
 		<form action="index.php" method="POST">
 			<input type="submit" name="options" value="add new person"/></br>
 			<input type="submit" name="options" value="see all people"/></br>
-			<input type="submit" name="options" value="edit people"/></br>
 			<input type="submit" name="options" value="log out"/></br>
 		</form>
 		</div>
@@ -28,9 +27,6 @@
 						break;
 					case "see all people":
 						header('Location: listing.php');
-						break;
-					case "edit people":
-						header('Location: editData.php');
 						break;
 					case "log out":
 						changeLoggedStatus(0);

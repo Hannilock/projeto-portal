@@ -25,26 +25,31 @@
 		</style>
 	</head>
 	<body>
-		<table>
-			<tr>
-				<th>Nome</th>
-				<th>Data de Nascimento</th>
-			    <th>Endereço</th>
-			    <th>Telefone</th>
-			    <th>Email</th>
-			</tr>
-			<?php
-				for($i = 0; $i < sizeof($people)-1; $i++){
-					echo "<tr>";
-					$person = getPerson($people[$i]);
-					for($e = 0; $e < sizeof($person); $e++){
-						echo "<td>";
-						echo $person[$e];
-						echo "</td>";
+		<form action="editData.php" method="POST">
+			<table>
+				
+				<tr>
+					<th>Nome</th>
+					<th>Data de Nascimento</th>
+				    <th>Endereço</th>
+				    <th>Telefone</th>
+				    <th>Email</th>
+				</tr>
+				<?php
+					for($i = 0; $i < sizeof($people)-1; $i++){
+						echo "<tr>";
+						$person = getPerson($people[$i]);
+						for($e = 0; $e < sizeof($person); $e++){
+							echo "<td>";
+							echo $person[$e];
+							echo "</td>";
+						}
+						echo "<td><input type=\"submit\" name=\"edit[".$e."]\" value=\"editar\" /></td>";
+						echo "<td><input type=\"submit\" name=\"delete[".$e."]\" value=\"excluir\" /></td>";
+						echo "</tr>";
 					}
-					echo "</tr>";
-				}
-			?>
-		</table>
+				?>
+			</table>
+		</form>
 	</body>
 </html>
