@@ -30,6 +30,7 @@
 						header('Location: listing.php');
 						break;
 					case "edit people":
+						header('Location: editData.php');
 						break;
 					case "log out":
 						changeLoggedStatus(0);
