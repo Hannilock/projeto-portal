@@ -1,5 +1,5 @@
 <?php
-	require 'logfunctions.php';
+	require 'functions.php';
 	if(!isset($_COOKIE['isLogged']) || ($_COOKIE['isLogged'] != "1")){
 		header("Location: login.php");
 	}

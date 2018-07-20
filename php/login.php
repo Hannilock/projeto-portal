@@ -1,5 +1,5 @@
 <?php
-	require 'logfunctions.php';
+	require 'functions.php';
 	if(isset($_POST['password'])){
 		if(isUserValid($_POST['username'],$_POST['password'])){
 			changeLoggedStatus(1);

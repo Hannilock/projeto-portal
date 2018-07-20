@@ -1,4 +1,5 @@
 <?php
+	//log functions
 	function getUserData(){
 		$arquivo = "../senha.txt";
 		$ponteiro = Fopen($arquivo,"c+");
@@ -21,5 +22,16 @@
 	function changeLoggedStatus($status){
 		setcookie("isLogged", $status, time()+604800); //7 days logged in
 	}
+
+	//register functions
+	function writeData($name, $birthdate, $adress, $phone, $email){
+		$file = "../dados.txt";
+		$ponteiro = Fopen($file,"a+");
+		$data = PHP_EOL.$name."|".$birthdate."|".$adress."|".$phone."|".$email.";";
+		Fwrite($ponteiro,$data);
+		fclose($ponteiro);
+	}
+
+	//listing functions
 
 ?>
