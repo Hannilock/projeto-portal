@@ -1,4 +1,4 @@
-<?php
+<?php	
 	//log functions
 	function getUserData(){
 		$arquivo = "../senha.txt";
@@ -15,7 +15,7 @@
 			return true;
 		}
 		else{
-			echo "Username or passaword invalid.";
+			echo "<script type='text/javascript'>alert('Username or passaword invalid');</script>";
 			return false;
 		}
 	}

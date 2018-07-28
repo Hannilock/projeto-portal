@@ -2,17 +2,53 @@ body{
 	margin: 0px;
 	padding: 0px;
 }
-.holder{
+.header{
 	width: 100vw;
-	height: 10vh;
 	position: fixed;
 	left: 0;
 	top: 0;
-	background: #a26769;
+	background: #f34213;
 }
-.title{
-	margin: 0 auto;
-	padding-left: 70px;
-	font-size: 50px;
+.header h2{
+	padding: 0;
+	margin: 0;
+	margin-left: 80px;
+	font-size: 55px;
 	color: white;
+}
+.menu{
+	float: left;
+	display: block;
+	margin: 10px;
+	margin-left: 100px;
+}
+
+#logout{
+	border: none;
+	background: none;
+	color: white;
+	padding-top: 27px;
+	text-decoration: underline;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+	text-decoration: none;
+	color: #f34213;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 11px;
+}
+li{
+	margin: 5px;
+	padding: 10px;
+	float: left;
+	display: block;
+	background: white;
+}
+#title{
+	float:left;
 }

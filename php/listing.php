@@ -1,5 +1,8 @@
 <?php
 	require 'functions.php';
+	require '../css/fonts.php';
+	include 'header.php';
+	include 'footer.php';
 	$people = getPeople();
 	if(isset($_POST["sub"])){
 		editInfo(getPeople(), $_POST['position'],$_POST['name'],$_POST["birthdate"],$_POST["adress"],$_POST["phone"],$_POST["email"]);
@@ -9,23 +12,12 @@
 <html>
 	<head>
 		<title>Listing - Portal</title>
+		<link rel="stylesheet" href="../css/main_style.css">
 		<style>
-			table {
-			    font-family: arial, sans-serif;
-			    border-collapse: collapse;
-			    width: 100%;
+			body{
+				padding-top: 80px;
 			}
-
-			td, th {
-			    border: 1px solid #dddddd;
-			    text-align: left;
-			    padding: 8px;
-			}
-
-			tr:nth-child(even) {
-			    background-color: #dddddd;
-			}
-		</style>
+		</style> 
 	</head>
 	<body>
 		<form action="editInfo.php" method="POST">
@@ -47,8 +39,8 @@
 							echo $person[$e];
 							echo "</td>";
 						}
-						echo "<td><input type=\"submit\" name=\"edit[".$i."]\" value=\"editar\" /></td>";
-						echo "<td><input type=\"submit\" name=\"delete[".$i."]\" value=\"excluir\" /></td>";
+						echo "<td><input class=\"default-button\" type=\"submit\" name=\"edit[".$i."]\" value=\"editar\" /></td>";
+						echo "<td><input class=\"default-button\" type=\"submit\" name=\"delete[".$i."]\" value=\"excluir\" /></td>";
 						echo "</tr>";
 					}
 				?>

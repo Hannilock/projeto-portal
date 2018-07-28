@@ -1,7 +1,5 @@
-Patch 19.07.03
+Patch 27.07.01
 O que falta:
--header
--footer
--deixar bonito
+verificar por bugs e definir alguns tipos de fonte.
 
 ~~Virgínia M. Carvalho, 401 INFO.

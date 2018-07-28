@@ -1,12 +1,20 @@
 body{
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
-.fooholder{
+.footerholder{
+	position:fixed;
+   	left:0px;
+   	bottom:0px;
 	width: 100vw;
+	background: #f34213;
 	height: 5vh;
-	left: 0px;
-	bottom: 0px;
-	position: fixed;
-	background: #a26769;
+}
+.footerholder p{
+	margin:0;
+	margin-left: 10vw;
+	margin-top: 10px;
+	color: white;
+	font-family: 'ABeeZee', sans-serif;
+	font-size: 12px;
 }

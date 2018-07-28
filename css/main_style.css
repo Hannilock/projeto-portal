@@ -1,0 +1,72 @@
+body{
+	background: #d9d2b6;
+}
+.holder{
+	background: #e4be9e;
+	margin: 0 auto;
+	margin-top: 30vh;
+	text-align: center;
+	color: #2e2e3a;	
+}
+#login.holder{
+}
+
+.holder h3, h2, p, input{
+	margin:0;
+	margin-bottom: 10px;
+}
+
+h3, h2{
+	font-family: 'Philosopher', sans-serif;
+	color: #f34213;
+}
+
+h3{
+	font-size: 35px;
+}
+
+#edit.holder h3{
+	margin-bottom: 0;
+}
+#logintag{
+	margin:0;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	color: #f34213;
+	font-family: 'Philosopher', sans-serif;
+	font-size: 35px;
+}
+
+.default-button{
+	background-color: #f34213;
+	color: white;
+	border:none;
+	padding: 5px 15px;
+}
+
+#login.default-button{
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.form-wrapper .field-list .field {
+    position: relative;
+    margin: -20px 0px 24px;
+ }
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #e4be9e;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #e4be9e;
+}
+
