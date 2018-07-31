@@ -25,6 +25,11 @@ h3{
 	font-size: 35px;
 }
 
+#edit.holder h2{
+	font-family: 'ABeeZee', sans-serif;
+	font-size: 18px;
+}
+
 #edit.holder h3{
 	margin-bottom: 0;
 }
