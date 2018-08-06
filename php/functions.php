@@ -37,6 +37,19 @@
 	}
 
 	//listing functions
+	function getPeopleSize(){
+		$peopleSize = 0;
+		$arquivo = "../dados.txt";
+		$ponteiro = Fopen($arquivo,"c+");
+		if(filesize($arquivo)){
+			$texto = Fread($ponteiro, filesize($arquivo));
+			$people = explode(";", $texto);
+			$peopleSize = sizeof($people);
+		}
+		fclose($ponteiro);
+		return $peopleSize;
+	}
+
 	function getPeople(){
 		$arquivo = "../dados.txt";
 		$ponteiro = Fopen($arquivo,"c+");
@@ -88,10 +101,21 @@
 	function deleteIfNeeded($people){
 		if(is_array($_POST["delete"])){
 			unset($people[getPosition()]);
-			array_values($people);
-			rewriteFile($people);
-			//find how to warn user that the thing was deleted
+			$arquivo = "../dados.txt";
+			$ponteiro = Fopen($arquivo,"w+");
+			for($i = 0; $i < sizeof($people); $i++){
+				if($people[$i] != null || $people[$i] != 0){
+					$person = "".$people[$i].";".PHP_EOL;
+					Fwrite($ponteiro,$person);
+				}
+			}
+			fclose($ponteiro);
 			header("Location: listing.php");
+			//unset(getPosition());
+			//array_values($people);
+			//rewriteFile($people);
+			//find how to warn user that the thing was deleted
+			//header("Location: listing.php");
 		}
 	}
 ?>

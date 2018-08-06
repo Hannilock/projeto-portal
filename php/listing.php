@@ -3,7 +3,6 @@
 	require '../css/fonts.php';
 	include 'header.php';
 	include 'footer.php';
-	$people = getPeople();
 	if(isset($_POST["sub"])){
 		editInfo(getPeople(), $_POST['position'],$_POST['name'],$_POST["birthdate"],$_POST["adress"],$_POST["phone"],$_POST["email"]);
 	}
@@ -31,20 +30,29 @@
 				    <th>Email</th>
 				</tr>
 				<?php
-					for($i = 0; $i < sizeof($people)-1; $i++){
-						echo "<tr>";
-						$person = getPerson($people[$i]);
-						for($e = 0; $e < sizeof($person); $e++){
-							echo "<td>";
-							echo $person[$e];
-							echo "</td>";
-						}
-						echo "<td><input class=\"default-button\" type=\"submit\" name=\"edit[".$i."]\" value=\"editar\" /></td>";
-						echo "<td><input class=\"default-button\" type=\"submit\" name=\"delete[".$i."]\" value=\"excluir\" /></td>";
-						echo "</tr>";
+					$sizePeople = getPeopleSize();
+					if($sizePeople){
+						$people = getPeople();
+						for($i = 0; $i < sizeof($people)-1; $i++){
+							echo "<tr>";
+							$person = getPerson($people[$i]);
+							for($e = 0; $e < sizeof($person); $e++){
+								echo "<td>";
+								echo $person[$e];
+								echo "</td>";
+							}
+							echo "<td><input class=\"default-button\" type=\"submit\" name=\"edit[".$i."]\" value=\"editar\" /></td>";
+							echo "<td><input class=\"default-button\" type=\"submit\" name=\"delete[".$i."]\" value=\"excluir\" /></td>";
+							echo "</tr>";
+						}	
 					}
+					else{
+						echo "<tr>";
+						echo"<td style=\"text-align:center\" colspan=\"5\"> there ain't no people registered :( </td>";
+						echo "<tr>";
+					}
+					echo "</table>";
+					echo "</form>";
 				?>
-			</table>
-		</form>
 	</body>
 </html>

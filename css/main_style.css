@@ -1,8 +1,8 @@
 body{
-	background: #d9d2b6;
+	background: #fff4d1;
 }
 .holder{
-	background: #e4be9e;
+	background: #fad7bb;
 	margin: 0 auto;
 	margin-top: 30vh;
 	text-align: center;
@@ -66,12 +66,12 @@ table {
 }
 
 td, th {
-	border: 1px solid #e4be9e;
+	border: 1px solid #fad7bb;
 	text-align: left;
 	padding: 8px;
 }
 
 tr:nth-child(even) {
-	background-color: #e4be9e;
+	background-color: #fad7bb;
 }
 
